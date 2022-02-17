@@ -1,0 +1,175 @@
+html, body {
+    /*height:100%;*/
+    margin:0;
+    padding: 0;
+}
+
+/*
+body {
+    background-color: #eee
+}
+*/
+
+.chat-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+    cursor: pointer
+}
+
+.chat-btn .close {
+    display: none
+}
+
+.chat-btn i {
+    transition: all 0.9s ease
+}
+
+#check:checked~.chat-btn i {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+#check:checked~.chat-btn .comment {
+    display: none
+}
+
+.chat-btn i {
+    font-size: 22px;
+    color: #fff !important
+}
+
+#check:checked~.chat-btn {
+    width: 80px;
+    height: 80px;
+}
+
+#check:checked~.chat-btn #chatbothgtext {
+    display: none
+}
+
+.chat-btn {
+    position: fixed;
+    z-index: 9999;
+    right: 14px;
+    bottom: 150px;
+    width: 240px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #001489;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.chat-btn #chatbothgtext {
+    font-size: 16px;
+}
+
+.chat-btn:hover {
+  background-color: #69b3e7;
+  box-shadow: 0px 15px 20px rgba(105, 179, 231, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.wrapper-chat {
+    position: fixed;
+    z-index: 9999;
+    right: 20px;
+    bottom: 250px;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    max-height: 80%;
+    padding: 1rem;
+    transition: all 0.4s
+}
+
+#check:checked~.wrapper-chat {
+    display: none;
+}
+
+#check {
+    display: none !important
+}
+
+/*custom scrollbar*/
+
+.wrapper-chat {
+  max-height: 80%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  direction: ltr;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+.wrapper-chat::-webkit-scrollbar {
+  width: 20px;
+}
+
+.wrapper-chat::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.wrapper-chat::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+
+.chat-header {
+  position: fixed;
+  z-index: 1;
+    padding: 13px;
+    background-color: blue;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+#webchat{
+  position: relative;        
+  z-index: 2;
+}
+
+
+/* Buat Contoh Halaman Website*/
+.h_iframe iframe {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+}
